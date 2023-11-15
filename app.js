@@ -3,7 +3,7 @@ const todoInput = document.querySelector("#addTodoInput");
 const todoContainer = document.querySelector("#todoContainer");
 const searchInput = document.querySelector("#searchInput");
 
-let todoListFromLocalStorage = JSON.parse(localStorage.getItem("todoList"));
+todoListFromLocalStorage = JSON.parse(localStorage.getItem("todoList"));
 let todoList = todoListFromLocalStorage || [];
 
 renderTodoList(todoListFromLocalStorage);
@@ -40,6 +40,11 @@ function noTodos() {
 
 // RENDER TODO LIST
 function renderTodoList(list) {
+  if (!list) {
+    localStorage.setItem("todoList", JSON.stringify(todoList));
+    document.location.reload();
+  }
+
   todoContainer.innerHTML = "";
 
   if (list.length === 0) {
