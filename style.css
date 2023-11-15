@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1 {
+    text-align: center;
+    color: #666;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-weight: 100;
+    margin: 0 0 10px 0;
+}
+
+#app {
+    margin: 0 auto;
+    width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.todo-input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#submitButton {
+    margin: 0 auto;
+    padding: 7px 30px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    border-radius: 5px;
+
+    &:hover {
+        background: #dfdfdf;
+        cursor: pointer;
+    }
+}
+
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.todo-item_title {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.todo-item_delete {
+    padding: 5px 10px;
+    border: none;
+    background: rgb(250, 107, 107);
+    color: white;
+    border-radius: 5px;
+
+    &:hover {
+        background: crimson;
+        cursor: pointer;
+    }
+}
+
+.todo-empty {
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: lighter;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
